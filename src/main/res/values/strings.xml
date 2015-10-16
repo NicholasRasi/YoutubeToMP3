@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">YoutubeToMp3</string>
+    <string name="action_settings">Settings</string>
+    <string name="text_youtube_link">Paste here your Youtube link</string>
+    <string name="button_download">Download Mp3</string>
+    <string name="text_downloading">Downloading</string>
+    <string name="text_novideofound">Error: no video found. Check link</string>
+    <string name="text_instructions">Open video or song from Youtube app, click share button and choose YoutubeToMp3\nOR paste a Youtube link up here.</string>
+    <string name="text_connectionerror">Connection error, please check your internet connection.</string>
+</resources>
