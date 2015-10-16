@@ -9,7 +9,7 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:showIn="@layout/activity_main" tools:context=".MainActivity">
 
-    <TextView android:text="@string/text_youtube_link" android:layout_width="wrap_content"
+    <TextView android:text="@string/text_instructions" android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView" />
 
@@ -22,7 +22,8 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:text="https://www.youtube.com/watch?v=LlY90lG_Fuw" />
+        android:text="https://www.youtube.com/watch?v=LlY90lG_Fuw"
+        android:inputType="text" />
 
     <Button
         android:layout_width="wrap_content"
@@ -47,19 +48,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Notice: please don&apos;t download copyrighted videos and mp3s. We are not responsible for any legal liability. Users are responsible for their own download."
+        android:text="@string/text_disclaimer"
         android:id="@+id/Disclaimer"
         android:layout_alignParentBottom="true"
-        android:layout_toRightOf="@+id/textOutput"
-        android:layout_toEndOf="@+id/textOutput" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="@string/text_instructions"
-        android:id="@+id/Instructions"
-        android:layout_above="@+id/Disclaimer"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
+
 </RelativeLayout>

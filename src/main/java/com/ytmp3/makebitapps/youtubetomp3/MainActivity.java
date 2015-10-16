@@ -10,8 +10,6 @@ import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.widget.TextView;
 
 import com.android.volley.Request;
@@ -35,8 +33,6 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-
-        // Instantiate the RequestQueue.
         queue = Volley.newRequestQueue(this);
         Intent intent = getIntent();
         String type = intent.getType();
@@ -47,51 +43,29 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
-
-    public boolean downloadToMp3(View view)
+    public void downloadToMp3(View view)
     {
         final TextView youtubeLink = (TextView) findViewById(R.id.youtubeLink);
 
-        if(youtubeLink.getText()!=""){
+        if(youtubeLink.getText() != ""){
             String url ="http://youtubeinmp3.com/fetch/?format=JSON&video="+youtubeLink.getText();
             handleDownload(url);
         }
-        return true;
     }
 
 
-    public boolean downloadToMp3Intent(Intent intent)
+    private void downloadToMp3Intent(Intent intent)
     {
         String sharedText = intent.getStringExtra(Intent.EXTRA_TEXT);
         final TextView youtubeLink = (TextView) findViewById(R.id.youtubeLink);
-        youtubeLink.setText("https://www.youtube.com/watch?v="+sharedText.substring(17));
+        String youtubeUrl = "https://www.youtube.com/watch?v="+sharedText.substring(17);
+        youtubeLink.setText(youtubeUrl);
 
-        if(sharedText != null){
+        if(!sharedText.equals("")){
             String url ="http://youtubeinmp3.com/fetch/?format=JSON&video=https://www.youtube.com/watch?v="+sharedText.substring(17);
             handleDownload(url);
         }
-        return true;
     }
 
     private void handleDownload(String url) {
@@ -126,5 +100,6 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
         queue.add(jsObjRequest);
+        textOutput.setText(getString(R.string.text_downloadstart));
     }
 }
