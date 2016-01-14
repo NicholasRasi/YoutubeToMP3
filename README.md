@@ -1,4 +1,4 @@
-# See YoutubeToMp3 new versione on [master](https://github.com/makebit/YoutubeToMp3)
+# See YoutubeToMp3 new version on [master](https://github.com/makebit/YoutubeToMp3)
 
 
 # YoutubeToMp3 v1.0
