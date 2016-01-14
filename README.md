@@ -1,9 +1,6 @@
-# See YoutubeToMp3 v2.0 [here](#)
-
-
-# YoutubeToMp3 v1.0
+# YoutubeToMp3
 An android application useful to download Mp3 from Youtube videos.
-This app uses youtubeinmp3.com
+This app uses saveitoffline.com
 
 ## Screenshot##
 ![](http://s18.postimg.org/66u0dbp4p/Screenshot_2015_10_16_21_44_10.jpg)
