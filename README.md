@@ -6,8 +6,8 @@ Download the latest release clicking [here](https://github.com/makebit/YoutubeTo
 ###Happy listening!
 
 <img src="http://s12.postimg.org/ph4nkmq71/home_smartphone_en.png" width=33%>
-<img src="http://s12.postimg.org/qaluqzllp/youtube_click.png" width=33%>
 <img src="http://s12.postimg.org/hlypjk5y5/youtube_share.png" width=33%>
+<img src="http://s12.postimg.org/qaluqzllp/youtube_click.png" width=33%>
 
 
 ##How to install?##
