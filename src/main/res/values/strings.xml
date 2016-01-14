@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name" translatable="false">YouToMp3</string>
+    <string name="app_name" translatable="false">YoutubeToMp3</string>
     <string name="button_download">Download Mp3</string>
     <string name="text_downloading">Downloading</string>
     <string name="text_instructions">Open a video or a song from Youtube app, click the share button and choose YoutubeToMp3 OR paste a Youtube link here.</string>
