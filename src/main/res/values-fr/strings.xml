@@ -1,0 +1,10 @@
+<resources>
+    <string name="button_download">Téléchargement MP3</string>
+    <string name="text_downloading">Téléchargement</string>
+    <string name="text_instructions">Ouvrez une vidéo ou une chanson de Youtube application, cliquez sur le bouton Partager et choisissez YoutubeToMp3 ou collez un lien Youtube ici.</string>
+    <string name="text_downloadstart">Le fichier sera téléchargé dans le dossier Télécharger</string>
+    <string name="text_disclaimer">Remarquez: s\'il vous plaît ne pas télécharger des vidéos et des fichiers MP3 protégés par copyright. Nous ne sommes pas responsables de toute responsabilité juridique. Les utilisateurs sont responsables de leur propre téléchargement. Cette application utilise saveitoffline.com</string>
+    <string name="text_getvideotitle">Obtenir le titre de la vidéo</string>
+    <string name="text_downloadisstarting">Téléchargement commence...</string>
+    <string name="text_downloaderror">Télécharger l\'erreur, s\'il vous plaît vérifier votre connexion Internet.</string>
+</resources>

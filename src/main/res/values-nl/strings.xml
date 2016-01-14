@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="button_download">Downloaden Mp3</string>
+	<string name="text_downloading">Downloaden</string>
+	<string name="text_instructions">Een video of een liedje van Youtube app openen, klik de aandeelknoop en kiest u \' YoutubeToMp3 of plak een Youtube-link hier.</string>
+	<string name="text_downloadstart">Het bestand zal worden gedownload in de downloadmap</string>
+	<string name="text_disclaimer">Opmerking: Gelieve don\'t downloaden van auteursrechtelijk beschermde video\'s en mp3s. Wij zijn niet verantwoordelijk voor eventuele wettelijke aansprakelijkheid. Gebruikers zijn verantwoordelijk voor hun eigen downloaden. Dit app maakt gebruik van saveitoffline.com</string>
+	<string name="text_getvideotitle">Titel van de video te krijgen</string>
+	<string name="text_downloadisstarting">Download begint...</string>
+	<string name="text_downloaderror">Download fout, Controleer uw internetverbinding.</string>
+</resources>

@@ -1,12 +1,11 @@
 <resources>
-    <string name="app_name">YoutubeToMp3</string>
-    <string name="action_settings">Settings</string>
-    <string name="text_youtube_link">Paste here your Youtube link</string>
+    <string name="app_name" translatable="false">YouToMp3</string>
     <string name="button_download">Download Mp3</string>
     <string name="text_downloading">Downloading</string>
-    <string name="text_novideofound">Error: no video found. Check link</string>
-    <string name="text_instructions">Open video or song from Youtube app, click share button and choose YoutubeToMp3 OR paste a Youtube link here.</string>
-    <string name="text_connectionerror">Connection error, please check your internet connection.</string>
+    <string name="text_instructions">Open a video or a song from Youtube app, click the share button and choose YoutubeToMp3 OR paste a Youtube link here.</string>
     <string name="text_downloadstart">The file will be downloaded into Download folder</string>
-    <string name="text_disclaimer">Notice: please don\'t download copyrighted videos and mp3s. We are not responsible for any legal liability. Users are responsible for their own download. This app uses youtubeinmp3.com</string>
+    <string name="text_disclaimer">Notice: please don\'t download copyrighted videos and mp3s. We are not responsible for any legal liability. Users are responsible for their own download. This app uses saveitoffline.com</string>
+    <string name="text_getvideotitle">Getting video title</string>
+    <string name="text_downloadisstarting">Download is starting...</string>
+    <string name="text_downloaderror">Download error, please check your internet connection.</string>
 </resources>

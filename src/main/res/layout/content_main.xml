@@ -22,26 +22,26 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:text="https://www.youtube.com/watch?v=LlY90lG_Fuw"
+        android:text="https://www.youtube.com/watch?v=BbOiqJJ5RxU"
         android:inputType="text" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/button_download"
-        android:id="@+id/button"
         android:layout_below="@+id/youtubeLink"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignRight="@+id/youtubeLink"
         android:layout_alignEnd="@+id/youtubeLink"
-        android:onClick="downloadToMp3" />
+        android:onClick="downloadToMp3"
+        android:id="@+id/downloadButton" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textOutput"
-        android:layout_below="@+id/button"
+        android:layout_below="@+id/downloadButton"
         android:layout_alignParentLeft="true" />
 
     <TextView
