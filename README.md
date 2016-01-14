@@ -1,7 +1,7 @@
 # YoutubeToMp3 - Android App
 Convert any Youtube video into a Mp3 in a touch!
 
-Download the latest release clicking [here](https://github.com/makebit/YoutubeToMp3/blob/master/YoutubeToMp3.apk)
+Download the latest release clicking [here](https://github.com/makebit/YoutubeToMp3/raw/master/YoutubeToMp3.apk)
 
 ###Happy listening!
 
