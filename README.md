@@ -1,4 +1,4 @@
-# See YoutubeToMp3 v2.0 on [Google Play](#)
+# See YoutubeToMp3 v2.0 [here](#)
 
 
 # YoutubeToMp3 v1.0
