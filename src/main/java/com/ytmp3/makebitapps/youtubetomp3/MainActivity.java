@@ -15,6 +15,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -115,7 +116,7 @@ public class MainActivity extends AppCompatActivity {
                 errorCode = 1;
             }
             else {
-                int pos = htmlDocument.toString().indexOf("session");
+                int pos = htmlDocument.toString().indexOf("bolt");
                 sessionKey = htmlDocument.toString().substring(pos + 11, pos + 55);
                 Log.e("sk", sessionKey);
             }
@@ -208,22 +209,23 @@ public class MainActivity extends AppCompatActivity {
                                 atDownload.execute();
                             }
                             try {
-                                JSONObject jObj = new JSONObject(response);
+                                JSONArray jsonArrayResponse = new JSONArray(response);
                                 // Search the correct format
-                                Iterator keys = jObj.keys();
                                 Boolean found = false;
-                                String currentDynamicKey = "";
-                                JSONObject currentDynamicValue;
-                                while(keys.hasNext() && !found) {
-                                    currentDynamicKey = (String)keys.next();
-                                    currentDynamicValue = jObj.getJSONObject(currentDynamicKey);
-                                    String type = currentDynamicValue.getString("type");
-                                    if(type.substring(0,18).equals("(Audio Only) - m4a")) found=true;
-                                    Log.e("r ",type.substring(0,18));
+                                int i = 0;
+                                JSONObject currentValue = new JSONObject();
+                                while (i<jsonArrayResponse.length() && !found){
+                                    currentValue = jsonArrayResponse.getJSONObject(i);
+                                    String label = currentValue.getString("label");
+                                    Log.e("r ", label);
+                                    if(label.equals("(audio - no video) webm (160 kbps)") || label.equals("(audio - no video) m4a (256 kbps)")){
+                                        Log.e("found ", label);
+                                        found = true;
+                                    }
+                                    i++;
                                 }
                                 if(found){
-                                    JSONObject number = jObj.getJSONObject(currentDynamicKey);
-                                    String link = number.getString("id");
+                                    String link = currentValue.getString("id");
                                     String downloadUrl = "http://www.saveitoffline.com/"+link;
                                     DownloadManager.Request request = new DownloadManager.Request(Uri.parse(downloadUrl));
                                     request.setDescription(getString(R.string.text_downloading));
@@ -260,10 +262,17 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 protected Map<String,String> getParams(){
                     Map<String,String> params = new HashMap<String, String>();
-                    params.put("input",yUrl);
-                    Log.e("using ",sessionKey);
+                    params.put("input", yUrl);
+                    Log.e("using ", sessionKey);
                     params.put("sessionKey",sessionKey);
                     return params;
+                }
+
+                @Override
+                public Map<String, String> getHeaders() throws AuthFailureError {
+                    Map<String, String> mHeaders = new HashMap<String, String>();
+                    mHeaders.put("Referer", "http://www.saveitoffline.com/");
+                    return mHeaders;
                 }
             };
             queue.add(strRequest);
