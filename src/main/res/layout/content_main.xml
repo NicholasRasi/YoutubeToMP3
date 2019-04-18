@@ -16,7 +16,7 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/youtubeLink"
+        android:id="@+id/EditTextYoutubeLink"
         android:layout_below="@+id/textView"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
@@ -26,23 +26,28 @@
         android:inputType="text" />
 
     <Button
+        android:id="@+id/downloadButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/button_download"
-        android:layout_below="@+id/youtubeLink"
-        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/EditTextYoutubeLink"
+        android:layout_alignEnd="@+id/EditTextYoutubeLink"
+        android:layout_alignRight="@+id/EditTextYoutubeLink"
         android:layout_alignParentStart="true"
-        android:layout_alignRight="@+id/youtubeLink"
-        android:layout_alignEnd="@+id/youtubeLink"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="32dp"
+        android:background="@color/colorAccent"
         android:onClick="downloadToMp3"
-        android:id="@+id/downloadButton" />
+        android:padding="32dp"
+        android:text="@string/button_download" />
 
     <TextView
+        android:id="@+id/textOutput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textOutput"
         android:layout_below="@+id/downloadButton"
-        android:layout_alignParentLeft="true" />
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="32dp"
+        android:textSize="24sp" />
 
     <TextView
         android:layout_width="wrap_content"
